@@ -10,6 +10,11 @@ app.use(express.urlencoded({ extended: true }));
 const port = 8081
 const endpoint = `/api/hello/`
 
+app.get("/",(req:Request, res:Response) => {
+    res.send("Welcome here")
+})
+
+
 app.get(endpoint, (req:Request, res:Response) => {
 
     const visitor_name = req.query.visitor_name
